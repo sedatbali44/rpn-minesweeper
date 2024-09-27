@@ -1,21 +1,13 @@
 package com.example.rpn_minesweeper.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class MinesweeperResponse {
+
     private String[] hints;
-
-    public MinesweeperResponse() {
-    }
-
-    public MinesweeperResponse(String[] hints) {
-        this.hints = hints;
-    }
-
-    public String[] getHints() {
-        return hints;
-    }
-
-    public void setHints(String[] hints) {
-        this.hints = hints;
-    }
 }
