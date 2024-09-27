@@ -1,31 +1,83 @@
-# rpn-minesweeper
- rpn and minesweeper
+# RPN-Minesweeper
 
+This project contains two main components: an RPN (Reverse Polish Notation) Calculator and a Minesweeper game solver.
 
- # RPN Calculator
- post :  http://localhost:8080/api/calculate
- input :
- {
-    "expression": "20 5 /"
- }
- output :
- {
-    "result": 4.0
-}
+## RPN Calculator
 
+The RPN Calculator allows you to perform calculations using Reverse Polish Notation.
 
-#  Minesweeper
-post :  http://localhost:8080/api/show-hints
-input : 
+### API Endpoint
+
+- **URL**: `http://localhost:8080/api/calculate`
+- **Method**: POST
+
+### Request Format
+
+```json
 {
-   "square": ["**...",".....",".*..."]
+  "expression": "20 5 /"
 }
-output : 
+```
+
+### Response Format
+
+```json
 {
-    "hints": [
-        "**100",
-        "33200",
-        "1*100"
-    ]
+  "result": 4.0
 }
-       
+```
+
+## Minesweeper Solver
+
+The Minesweeper solver takes a minefield configuration and returns a grid with hints about neighboring mines.
+
+### API Endpoint
+
+- **URL**: `http://localhost:8080/api/show-hints`
+- **Method**: POST
+
+### Request Format
+
+```json
+{
+  "square": [
+    "**...",
+    ".....",
+    ".*..."
+  ]
+}
+```
+
+### Response Format
+
+```json
+{
+  "hints": [
+    "**100",
+    "33200",
+    "1*100"
+  ]
+}
+```
+
+## Getting Started
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/sedatbali44/rpn-minesweeper.git
+   ```
+
+2. Navigate to the project directory:
+   ```
+   cd rpn-minesweeper
+   ```
+
+
+3. The server will start on `localhost:8080`. You can now use the API endpoints as described above.
+
+## Technologies Used
+
+- Java
+- Spring Boot
+- Maven
+- Postman
