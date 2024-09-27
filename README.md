@@ -1,4 +1,4 @@
-# RPN-Minesweeper
+# RPN Calculator And Minesweeper
 
 This project contains two main components: an RPN (Reverse Polish Notation) Calculator and a Minesweeper game solver.
 
