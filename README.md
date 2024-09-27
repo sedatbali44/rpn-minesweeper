@@ -2,7 +2,8 @@
  rpn and minesweeper
 
 
- #  post :  http://localhost:8080/api/calculate
+ # rpn calculater
+ post :  http://localhost:8080/api/calculate
  input :
  {
     "expression": "20 5 /"
