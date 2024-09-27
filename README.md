@@ -2,7 +2,7 @@
  rpn and minesweeper
 
 
- # rpn calculater
+ # RPN Calculator
  post :  http://localhost:8080/api/calculate
  input :
  {
@@ -14,7 +14,8 @@
 }
 
 
-#  post :  http://localhost:8080/api/show-hints
+#  Minesweeper
+post :  http://localhost:8080/api/show-hints
 input : 
 {
    "square": ["**...",".....",".*..."]
