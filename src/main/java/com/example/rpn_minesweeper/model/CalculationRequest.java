@@ -1,24 +1,16 @@
 package com.example.rpn_minesweeper.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class CalculationRequest {
 
     private String expression;
-
-    // Constructor, Getters, Setters
-    public CalculationRequest() {
-    }
-
-    public CalculationRequest(String expression) {
-        this.expression = expression;
-    }
-
-    public String getExpression() {
-        return expression;
-    }
-
-    public void setExpression(String expression) {
-        this.expression = expression;
-    }
 }
+
 
 

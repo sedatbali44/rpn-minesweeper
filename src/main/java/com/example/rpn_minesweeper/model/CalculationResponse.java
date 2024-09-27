@@ -1,22 +1,13 @@
 package com.example.rpn_minesweeper.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class CalculationResponse {
 
     private double result;
-
-    // Constructor, Getters, Setters
-    public CalculationResponse() {
-    }
-
-    public CalculationResponse(double result) {
-        this.result = result;
-    }
-
-    public double getResult() {
-        return result;
-    }
-
-    public void setResult(double result) {
-        this.result = result;
-    }
 }
