@@ -18,7 +18,6 @@ public class CalculatorController {
 
     @PostMapping("/calculate")
     public CalculationResponse calculate(@RequestBody CalculationRequest request) {
-        double result = rpnCalculatorService.calculateRPN(request.getExpression());
-        return new CalculationResponse(result);
+        return rpnCalculatorService.calculate(request);
     }
 }

@@ -1,5 +1,7 @@
 package com.example.rpn_minesweeper.service.impl;
 
+import com.example.rpn_minesweeper.model.CalculationRequest;
+import com.example.rpn_minesweeper.model.CalculationResponse;
 import com.example.rpn_minesweeper.service.RPNCalculatorService;
 import org.springframework.stereotype.Service;
 
@@ -36,5 +38,11 @@ public class RPNCalculatorServiceImpl implements RPNCalculatorService {
         }
 
         return stack.pop();
+    }
+
+    @Override
+    public CalculationResponse calculate(CalculationRequest request) {
+        double result = calculateRPN(request.getExpression());
+        return new CalculationResponse(result);
     }
 }
